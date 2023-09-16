@@ -41,6 +41,8 @@ stages:
     - script: './node_modules/.bin/node-sass $(wwwrootDir) --output $(wwwrootDir)'
       displayName: 'Compile Sass assets'
 
+    - script: 'ls ./node_modules/.bin/'
+      displayName: 'Compile Sass assets'
     - task: gulp@1
       displayName: 'Run gulp tasks'
 
