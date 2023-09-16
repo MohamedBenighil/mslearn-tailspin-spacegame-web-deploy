@@ -1,10 +1,7 @@
 trigger:
 - 'master'
 
-pool:
-  name: Default
-  demands:
-  - agent.name -equals agentdevops
+
 
 variables:
   buildConfiguration: 'Release'
@@ -20,7 +17,11 @@ stages:
     #  vmImage: 'ubuntu-20.04'
     #  demands:
     #  - npm
-
+    pool:
+      name: Default
+      demands:
+      - agent.name -equals agentdevops
+      
     variables:
       wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
       dotnetSdkVersion: '6.x'
