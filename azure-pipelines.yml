@@ -19,6 +19,7 @@ stages:
       name: Default
       demands:
       - agent.name -equals agentdevops
+
     variables:
       wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
       dotnetSdkVersion: '6.x'
